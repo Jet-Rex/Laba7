@@ -1,6 +1,6 @@
 /*************************
-* Автор: Базанов В.В. *
-* Название: Вариант №1 *
+* ГЂГўГІГ®Г°: ГЃГ Г§Г Г­Г®Гў Г‚.Г‚. *
+* ГЌГ Г§ГўГ Г­ГЁГҐ: Г‚Г Г°ГЁГ Г­ГІ В№1 *
 *************************/
 
 
@@ -69,9 +69,9 @@ string ConvertToRoman(int number) {
 int main() {
   int choice;
     cout << "Choose the translation mode:\n";
-    cout << "1 - Arabic number to Roman numeral\n";
-    cout << "2 - Roman number to Arabic numeral\n";
-    cout << "please enter the transaction number: ";
+         << "1 - Arabic number to Roman numeral\n";
+         << "2 - Roman number to Arabic numeral\n";
+         << "please enter the transaction number: ";
     cin >> choice;
     
     if (choice == 1) {
@@ -90,4 +90,5 @@ int main() {
           cout << "Error: incorrect choice." << endl;
         }
   return 0;
+
 }
