@@ -23,7 +23,7 @@ int ConvertToArabic(const string& romanNumeral) {
      int total = 0;
      int prevValue = 0;
 
-  for (int i = romanNumeral.size() - 1; i >= 0; --i) {
+  for (int elementIndex = romanNumeral.size() - 1; elementIndex >= 0; --elementIndex) {
     char ch = romanNumeral[i];
     int value = romanValues[ch];
 
@@ -92,3 +92,4 @@ int main() {
   return 0;
 
 }
+
