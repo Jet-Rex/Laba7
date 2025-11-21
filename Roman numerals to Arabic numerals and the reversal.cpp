@@ -1,6 +1,6 @@
 /*************************
-* Àâòîð: Áàçàíîâ Â.Â. *
-* Íàçâàíèå: Âàðèàíò ¹1 *
+* Автор: Базанов В.В. *
+* Название: Вариант №1 *
 *************************/
 
 
@@ -10,7 +10,7 @@
 
 using namespace std;
 
-int ConvertToArabic(const string& romanNumeral) {
+int ConvertToArabic(string romanNumeral) {
   map<char, int> romanValues = {
     {'I', 1},
     {'V', 5},
@@ -24,8 +24,8 @@ int ConvertToArabic(const string& romanNumeral) {
      int prevValue = 0;
 
   for (int elementIndex = romanNumeral.size() - 1; elementIndex >= 0; --elementIndex) {
-    char ch = romanNumeral[i];
-    int value = romanValues[ch];
+    char currentChar = romanNumeral[elementIndex];
+    int value = romanValues[currentChar];
 
     if (value >= prevValue) {
       total += value;
@@ -53,24 +53,24 @@ string ConvertToRoman(int number) {
     {5, "V"},
     {4, "IV"},
     {1, "I"}
-   };
+  };
 
   string result;
 
-   for (pair <int, string> pair : romanMap) {
-     while (number >= pair.first) {
-       result += pair.second;
-       number -= pair.first;
-     }
-   }
-   return result;
+  for (pair <int, string> pair : romanMap) {
+    while (number >= pair.first) {
+      result += pair.second;
+      number -= pair.first;
+    }
+  }
+  return result;
 }
 
 int main() {
   int choice;
-    cout << "Choose the translation mode:\n";
-         << "1 - Arabic number to Roman numeral\n";
-         << "2 - Roman number to Arabic numeral\n";
+    cout << "Choose the translation mode:\n"
+         << "1 - Arabic number to Roman numeral\n"
+         << "2 - Roman number to Arabic numeral\n"
          << "please enter the transaction number: ";
     cin >> choice;
     
@@ -90,7 +90,6 @@ int main() {
           cout << "Error: incorrect choice." << endl;
         }
   return 0;
-
 }
 
 
