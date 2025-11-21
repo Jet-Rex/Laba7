@@ -57,7 +57,7 @@ string ConvertToRoman(int number) {
 
   string result;
 
-   for (const auto& pair : romanMap) {
+   for (pair <int, string> pair : romanMap) {
      while (number >= pair.first) {
        result += pair.second;
        number -= pair.first;
@@ -92,4 +92,5 @@ int main() {
   return 0;
 
 }
+
 
